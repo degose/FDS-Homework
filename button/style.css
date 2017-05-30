@@ -1,0 +1,148 @@
+@charset "utf-8";
+body{
+    width: 1200px;
+}
+button{
+    padding: 0;
+    width: 300px;
+    height: 60px;
+    cursor: pointer;
+    margin: 30px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.btn-1{
+    display: inline-block;
+    background: transparent;
+    border: 2px solid skyblue;
+    position: relative;
+    /*top: 0;
+    left: 0;*/
+    overflow: hidden;
+    transition: 0.3s;
+}
+.btn-1:hover{
+    color: #fff;
+    transition: 0.3s;
+}
+.btn-1::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background: skyblue;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 60px;
+    z-index: -1;
+}
+.btn-1:hover::after{
+    transform: translateX(300px);
+    transition: transform 1s;
+}
+.btn-2-1{
+    border-radius: 0;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 0;
+    background: #fff;
+}
+.btn-2-1:after{
+    position: absolute;
+    transition: 0.3s;
+    content: "";
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    background: skyblue;
+}
+.btn-2-1:hover:after{
+    width: 100%;
+    left: 0;
+}
+.btn-2-2{
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    width: 300px;
+    height: 60px;
+    margin: 30px;
+    background: #fff;
+    border: none;
+    line-height: 60px;
+}
+.btn-2-2::after{
+    display: block;
+    margin: 0 150px;
+    content:"";
+    background: skyblue;
+    height: 2px;
+    transition: 0.3s;
+}
+.btn-2-2:hover::after{
+    margin: 0;
+    transition: 0.5s;
+}
+.btn-3{
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    width: 300px;
+    height: 60px;
+    margin: 30px;
+    background: #fff;
+    border: none;
+    line-height: 60px;
+}
+.btn-3::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    border-left: 2px solid skyblue;
+    border-right: 2px solid skyblue;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.btn-3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    border-top: 2px solid skyblue;
+    border-bottom: 2px solid skyblue;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.btn-3:hover::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-left: 2px solid skyblue;
+    border-right: 2px solid skyblue;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.btn-3:hover::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid skyblue;
+    border-bottom: 2px solid skyblue;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+

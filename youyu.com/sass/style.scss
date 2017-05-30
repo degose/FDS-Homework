@@ -1,0 +1,37 @@
+/*! 대표다! style.scss @ 2017, gose */
+// @import url('susy/susy');
+// @import 'yamoo9/yamoo9';
+// @import 'config';
+@import 'partials/settings';
+@import 'partials//header';
+@import 'partials/main';
+@import 'partials/footer';
+@import './css/modules/init';
+@import 'partials/base';
+@import 'partials/color';
+@import 'grid';
+
+// $base-line-height: $base-font-size * 1.5;
+// // $base-line-height: 10px;
+
+// body{
+//   @extend %reset-margin;
+// }
+
+// .page{
+// //   +container(1280px)
+//   height: 100vh
+// }
+
+// .box
+//   // height: rem(42px)
+//   +px-rem(height, $base-font-size * 1.5)
+//   &.is-1
+//     +span(3)
+//     +bg-color(#333, 0.4)
+//   &.is-2
+//     +span(6)
+//     +bg-color(#f00, 0.4)
+//   &.is-3
+//     +span(2)
+//     +bg-color(#f00, 0.4)

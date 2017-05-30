@@ -1,0 +1,182 @@
+// ! 푸터 영역
+
+@import 'color';
+@import 'settings';
+@import 'base';
+@import 'mixin';
+
+//  푸터 네비
+.footer-nav-bg{
+    background: $color-7;
+    height: row-height(2);
+    width: 100%;
+}
+.footer-nav{
+    height: row-height(2);
+    line-height: row-height(2);
+    ul{
+        display: flex;
+        flex-direction: row;
+    }
+    a{
+        color: $color-8;
+        font-weight: 600;
+        padding: 5px 38px;
+        // border-left: 1px solid $color-8;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            background: $color-8;
+            width: 1px;
+            height: 16px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:hover{
+            background: $color-6;
+            border-radius: 2px;
+            color: $color-2;
+        }
+        &:hover::before{
+            display: none;
+        }
+    }
+    .last::after{
+        content: "";
+        position: absolute;
+        background: $color-8;
+        width: 1px;
+        height: 16px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+// adress 정보
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+%footer-font-style{
+    font-size: 1.2rem;
+    font-style: normal;
+    color: $color-1;
+    line-height: $leading;
+}
+.address{
+    margin-top: row-height(2);
+    display: flex;
+    flex-wrap: wrap;
+    span{
+        @extend %footer-font-style;
+        margin-right: 22px;
+        em{
+            font-style: normal;
+            font-weight: 600;
+        }
+    }
+}
+.copyright{
+    @extend %footer-font-style;
+    font-weight: 600;
+}
+
+.sns{
+    display: flex;
+    flex-direction: row;
+    margin-top: row-height(1);
+    margin-bottom: row-height(1);
+    position: absolute;
+    top: row-height(5);
+    left: 10px;
+    height: row-height(2);
+    padding-top: 7px;
+    .sns-list{
+        display: flex;
+        flex-direction: row; 
+        height: row-height(2);
+        a{
+            width: 26px;
+            height: 26px;
+            display: inline-block;
+            background: url('../../images/icons/icons.svg');
+            background-size: 34px auto;
+            margin-right: 5px;
+        }
+        .sns-wechat{
+            background-position: 0 -343px;
+            &:hover{
+                background: #e8741f;
+                border-radius: 3px;
+            }
+        }
+        .sns-taobao{
+            background-position: 0 -369px;
+            &:hover{
+                background: #2dc100;
+                border-radius: 3px;
+            }
+        }
+        .sns-facebook{
+            background-position: 0 -78px;
+            &:hover{
+                background: #475993;
+                border-radius: 3px;
+            }
+        }
+        .sns-weibo{
+            background-position: 0 100%;
+            &:hover{
+                background: #f29600;
+                border-radius: 3px;
+            }
+        }
+        .sns-insta{
+            background-size: 26px auto;
+            background-position: 0 -98px;
+            &:hover{
+                background: #893cb1;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+.related-link{
+    background: url('../../images/footer/partner.png') no-repeat;
+    width: 202px;
+    height: 26px;
+    line-height: row-height(2);
+    display: inline-block;
+    margin-left: 15px;
+}
+.customer-center{
+    position: absolute;
+    top: row-height(2);
+    height: row-height(5);  
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    width: column-width(2);
+    .customer-center-heading{
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: $color-1;
+        line-height: row-height(1);
+    }
+    .call-number{
+        font-size: 2.7rem;
+        color: $color-point-1;
+        line-height: row-height(2);
+        font-weight: 800;
+        text-indent: -2px;
+    }
+    .time{
+        display: flex;
+        flex-direction: column;
+        @extend %footer-font-style;
+    }
+}

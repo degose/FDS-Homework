@@ -1,0 +1,16 @@
+.brand-arrow-next, .brand-arrow-prev{
+	background: url(sprites.png) no-repeat;
+}
+
+.brand-arrow-next{
+	background-position: -43px 0;
+	width: 6px;
+	height: 9px;
+}
+
+.brand-arrow-prev{
+	background-position: 0 0;
+	width: 6px;
+	height: 9px;
+}
+

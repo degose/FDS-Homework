@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.wrapper{
+    padding: 0 165px;
+    width: 748px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+}
+.wrapper div{
+    width: 187px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+}
+div.color1{
+    background: #777;
+}
+div.color2{
+    background: #888;
+}
+div.color3{
+    background: #999;
+}
+div.color4{
+    background: #ccc;
+}
+div.color5{
+    background: #eee;
+}
+.right{
+    order: -1;
+}
+.left{
+    order: 2;
+}
+.middle{
+    order: 1;
+}

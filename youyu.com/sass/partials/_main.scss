@@ -1,0 +1,348 @@
+// 메인 영역
+@import 'mixin';
+@import 'base';
+@import 'color';
+@import 'settings';
+// @import './../../css/sprites/icons-svg.css';
+
+.banner{
+    margin-top: row-height(4);
+    // margin-bottom: row-height(1) - 6px;
+    height: row-height(23);
+    // background: red;
+    text-align: center;
+    position: relative;
+    // display: flex;
+    // flex-direction: row;
+}
+.carousel-img{
+    height: row-height(21);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+input[type="radio"]{
+    // @extend %a11y-hidden;
+    width: 9px;
+    height: 9px;
+}
+input[type="radio"]::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: silver;
+}
+.input[type="radio"]:checked::after{
+    background: $color-point-1;
+}
+// .carousel-btn{
+//     border: 0;
+//     width: 10px;
+//     height: 10px;
+//     border-radius: 5px;
+//     padding: 0;
+//     margin: 0 3px;
+//     margin-bottom: row-height(2);
+//     &:checked{
+//         background: $color-point-1;
+//     }
+// }
+// .carousel{
+//     height: row-height(1);
+//     text-align: center;
+//     position: relative;
+//     background: rebeccapurple;
+// }
+
+// 베스트 셀러
+.best-seller{
+    h2{
+        @extend %h2-style;
+    }
+}
+%item-box{
+    display: block;
+    height: row-height(17);
+    border: 1px solid #dddddd;
+    padding: 20px;
+    position: relative;
+    img{
+        margin-bottom: row-height(1) - 6px;
+    }
+    .item-title{
+        @extend %h4-style;
+        margin: 0;
+        padding: 0;
+        line-height: row-height(1);
+    }
+    .item-text{
+        @extend %p-style;
+        margin: 0 0 row-height(1) - 4px 0;
+        line-height: row-height(1);
+    }
+    .item-price{
+        @extend %price-style;
+    }
+    input[type="checkbox"]{
+        @extend %a11y-hidden;
+    }
+    input[type="checkbox"] + label {
+        position: absolute;
+        line-height: row-height(1);
+        display: inline-block;
+        overflow: hidden;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+        overflow: hidden;
+        padding-top: 16px;
+        background: url('../../images/icons/making/Icons-like.svg') no-repeat;
+        background-size: 16px;
+        right: 20px;
+        bottom: 23px;
+    }
+    input[type="checkbox"]:checked + label {
+        background: url('../../images/icons/making/Icons-like-on.svg') no-repeat;
+    }
+    &:hover{
+        border-color: $color-point-1;
+    }
+}
+.best-seller-item{
+    @extend %item-box;
+}
+
+// 브랜드
+
+.brand{
+    h2{
+        @extend %h2-style;
+    }
+}
+%brand-box{
+    display: block;
+    height: row-height(7);
+    background: red;
+    position: relative;
+    .brand-layer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.5);
+        height: row-height(1);
+        width: 100%;
+        padding: 0 10px;
+        .brand-title{
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: $color-6;
+            line-height: row-height(1);
+            margin: 0;
+        }
+        input[type="checkbox"]{
+            @extend %a11y-hidden;
+        }
+        input[type="checkbox"] + label {
+            position: absolute;
+            display: inline-block;
+            overflow: hidden;
+            cursor: pointer;
+            padding-bottom: 4px;
+            height: 16px;
+            width: 16px;
+            bottom: 3px;
+            right: 10px;
+            background: url('../../images/icons/making/Icons-like.svg') no-repeat;
+            background-size: 16px;
+        }
+        input[type="checkbox"]:checked + label {
+            background: url('../../images/icons/making/Icons-like-on.svg') no-repeat;
+        }       
+    }
+    .brand-img-title{
+            position: absolute;
+            width: column-width(3);
+            text-align: center;
+            line-height: row-height(6);
+            color: $color-6;
+            font-size: 3.0rem;
+            font-weight: 700;
+            text-shadow: 1px 0px 5px rgba(0,0,0,0.3), 0px 1px 5px rgba(0,0,0,0.3), -1px 0px 5px rgba(0,0,0,0.3), 0px -1px 5px rgba(0,0,0,0.3);
+    }
+}
+.brand-item{
+    @extend %brand-box;
+}
+.btn-brand-group{
+    width: $page-width;
+    position: absolute;
+    %brand-button-style{
+        background: $color-5;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        height: row-height(7);
+        width: 22px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .btn-brand-prev{
+        position: absolute;
+        left: -20px;
+        @extend %brand-button-style;
+        &::before{
+            display: block;
+            transform: translateY(-50%);
+            top: 50%;
+            content: "";
+            background: url('../../images/brand/sprites.png') no-repeat;
+            background-position: 0 0;
+            width: 6px;
+            height: 9px;
+        }
+    }
+    .btn-brand-next{
+        position: absolute;
+        right: -20px;
+        @extend %brand-button-style;
+        &::before{
+            display: block;
+            transform: translateY(-50%);
+            top: 50%;
+            content: "";
+            background: url('../../images/brand/sprites.png') no-repeat;
+            background-position: -43px 0;
+            width: 6px;
+            height: 9px;
+        }
+    }
+}
+
+
+// 신상품
+
+.new-product-item{
+    h2{
+        @extend %h2-style;
+    }
+}
+.new-item{
+    @extend %item-box;
+}
+
+// 언니의 팁
+
+.tip{
+    position: relative;
+    margin: 0;
+    height: row-height(15);
+    overflow: hidden;
+    h2{
+        @extend %h2-style;
+    }
+    .tip-carousel{
+        position: absolute;
+        top: row-height(2);
+        right: $half-gutter-width;
+        button{
+            @extend %carousel-style;
+            margin-left: 6px;
+        }
+    }
+}
+.tip-item-list a{
+    // display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+// 베스트 리뷰
+%best-review-box{
+    display: block;
+    height: row-height(16);
+    border: 1px solid #dddddd;
+    padding: 20px;
+    position: relative;
+    img{
+        margin-bottom: row-height(1) - 6px;
+    }
+    .item-title{
+        @extend %h4-style;
+        margin: 0;
+        padding: 0;
+        line-height: row-height(1);
+    }
+    .item-text{
+        @extend %p-style;
+        margin: 0 0 row-height(1) - 4px 0;
+        line-height: row-height(1);
+    }
+    .item-price{
+        @extend %price-style;
+    }
+    input[type="checkbox"]{
+        @extend %a11y-hidden;
+    }
+    input[type="checkbox"] + label {
+        position: absolute;
+        line-height: row-height(1);
+        display: inline-block;
+        overflow: hidden;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+        overflow: hidden;
+        padding-top: 16px;
+        background: url('../../images/icons/making/Icons-like.svg') no-repeat;
+        background-size: 16px;
+        right: 20px;
+        bottom: row-height(3) + 2px;
+    }
+    input[type="checkbox"]:checked + label {
+        background: url('../../images/icons/making/Icons-like-on.svg') no-repeat;
+    }
+    &:hover{
+        border-color: $color-point-1;
+    }
+}
+.best-review{
+    h2{
+        @extend %h2-style;
+    }
+}
+.best-review-item{
+    @extend %best-review-box;
+    margin-bottom: row-height(2);
+    position: relative;
+}
+.star-level-group{
+    position: absolute;
+    left: 40px;
+    background: gray;
+    display: flex;
+    flex-direction: row;
+}
+.star-level{
+    input[type="checkbox"]{
+    @extend %a11y-hidden;
+    }
+    input[type="checkbox"] + label {
+        line-height: row-height(1);
+        display: inline-block;
+        overflow: hidden;
+        cursor: pointer;
+        height: 13px;
+        width: 13px;
+        background: red url('../../images/icons/icons.svg') no-repeat;
+        background-size: 17px auto;
+        background-position: 0 -160px;
+    }
+    input[type="checkbox"]:checked + label {
+        background: url('../../images/icons/icons.svg') no-repeat;
+        background-position: 0 -155px;
+    }
+}
+
