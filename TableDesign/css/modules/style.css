@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/*
+ * Susy Global Settings
+ * http://susydocs.oddbird.net/en/latest/settings/#global-defaults
+ */
+/* ! init 모듈*/
+html {
+  overflow-y: scroll;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  /* 14px */
+  line-height: 1.5;
+  /* 21px */
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  background: silver;
+  padding: 0 153px;
+  height: 300vh;
+}
+
+h2 {
+  background: red;
+}
+
+table {
+  border: 0;
+  background: yellow;
+  border-collapse: collapse;
+  table-layout: fixed;
+  padding: 0;
+}
+
+.body-table {
+  width: 1142px;
+}
+
+td {
+  background: skyblue;
+  border: 1px solid #444;
+  padding: 0;
+}
+
+tr {
+  background: pink;
+}
+
+.navigater-row {
+  height: 90px;
+}
+
+.empty-row {
+  height: 30px;
+}
+
+.breadcrumbs {
+  height: 30px;
+}
+
+.main-header-row {
+  height: 90px;
+}
+
+.sidebar-table {
+  width: 212px;
+  height: 480px;
+}
+
+.list-table {
+  width: 927px;
+}
+
+.side-btn {
+  width: 224px;
+}
+
+.list-row {
+  height: 60px;
+}
+
+.side-nav {
+  position: absolute;
+  top: 90px;
+  left: 0;
+}
+
+.main-table {
+  width: 1142px;
+}
+
+/*# sourceMappingURL=../../map/style.css.map */

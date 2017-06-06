@@ -1,0 +1,83 @@
+// ! layout 2017 gose
+
+// @import "partials/init";
+$row-height: 30px;
+
+
+.wrapper{
+    background: silver;
+    padding: 0 153px;
+    height: 300vh;
+}
+
+h2{
+    background: red;
+}
+
+table{
+    border: 0;
+    background: yellow;
+    border-collapse: collapse;
+    table-layout: fixed;
+    padding: 0;
+
+}
+.body-table{
+    width: 1142px;
+}
+
+td{
+    background: skyblue;
+    //width: 95.1px;// (1448 - (153*2)) / 12 = 95.16...
+    border: 1px solid #444;
+    padding: 0;
+}
+
+tr{
+    background: pink;
+    // height: 30px;
+}
+
+.navigater-row{
+    height: $row-height * 3;
+}
+.empty-row{
+    height: $row-height;
+}
+.breadcrumbs{
+    height: $row-height;
+}
+.main-header-row{
+    height: $row-height * 3;
+}
+// .sidebar{
+//     width: 224px;
+// }
+.sidebar-table{
+    width: 212px;
+    height: $row-height * 16;
+}
+.list-table{
+    width: 927px;
+}
+.side-btn{
+    width: 224px;
+}
+
+.list-row{
+    height: $row-height * 2;
+}
+
+
+.side-nav{
+    position: absolute;
+    top: $row-height * 3;
+    left: 0;
+}
+
+.main-table{
+    width: 1142px;
+}
+// .main-title{
+//     height: $row-height;
+// } - 왜 이거주니까 상단에도 여백이 생길까??
