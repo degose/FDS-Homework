@@ -1,0 +1,56 @@
+/* ! photo.showcase/style.css */
+
+body {
+   background: #fff;
+   font-size: 1.1rem;
+   font-family: 'Helvetica';
+   display: flex;
+   justify-content: center;
+   align-content: center;
+}
+
+/* 왜 body에 안주고 클래스를 따로 만들어서 사용? */
+.demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.photo-showcase-container{
+   position: relative;
+}
+.photo-showcase {
+   padding: 0;
+   margin: 0;
+   width: 900px;
+   height: 420px;
+}
+
+.photo-showcase-controller {
+   position: absolute;
+   top: 450px;
+   left: 0;
+   width: 900px;
+}
+.photo-showcase-controller ul{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: nowrap;
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+.photo-showcase-indicator{
+   display: inline-block;
+   flex: 0 1 auto;
+   transition: all 0.3s ease-out;
+   filter: grayscale(0.7);
+   transform: scale(1);
+}
+
+.photo-showcase-indicator img:hover,
+.photo-showcase-indicator:focus img {
+   filter: grayscale(0);
+   transform: scale(1.1);
+}

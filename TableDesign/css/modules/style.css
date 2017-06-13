@@ -40,6 +40,7 @@ table {
   border-collapse: collapse;
   table-layout: fixed;
   padding: 0;
+  border-spacing: 10px;
 }
 
 .body-table {
