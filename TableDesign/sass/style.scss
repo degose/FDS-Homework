@@ -1,7 +1,11 @@
 @import "susy/susy";
-@import "yamoo9/yamoo9";
 @import "config";
+@import "yamoo9/yamoo9";
 @import "partials/settings";
 @import "partials/mixin";
 @import "partials/init";
-@import "partials/layout";
+@import "partials/layout"; 
+
+.wrapper {
+   @include container(960px);
+}

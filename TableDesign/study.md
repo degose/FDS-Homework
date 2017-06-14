@@ -28,7 +28,7 @@ table-layout: fixed;
 - `colspan` : 상하로 합치고자 하는 셀의 개수
 - `rowspan` : 좌우로 합치고자 하는 셀의 개수
 
-- 예시
+- 예시 
 ```html
    <tr>
       <td colspan="2">Test11</td>
@@ -41,6 +41,9 @@ table-layout: fixed;
 
 
 
+- 홈페이지에서 리스트? 부분만 테이블로 구성하는것.(다시 짜자)
+- susy 세팅할때 css에 container = wrapper에 뭐를 줘야함
+- 테이블은 중첩하면 절대절대절대 안됨 -> 접근성에 절대 안좋음
 
 
 
