@@ -4,4 +4,4 @@
 ## [button](degose.github.io/FDS-Homework/button/)
 ## [function](degose.github.io/FDS-Homework/function/)
 ## [youyu.com](degose.github.io/FDS-Homework/youyu.com/)
-## [Table Design](degose.github.io/FDS-Homework/Table Design/index.html)
+## [Table Design](degose.github.io/FDS-Homework/TableDesign/)
