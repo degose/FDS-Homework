@@ -1,0 +1,139 @@
+/* ! todolist style.css */
+
+html {
+   font-family: 'Helvetica';
+   font-size: 10px;
+}
+
+body {
+   background: linear-gradient(to right, #43C6AC, #191654);
+   margin: 0;
+   align-items: center;
+   text-align: center;
+   padding: 50px 200px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+li {
+   font-size: 1.4rem;
+   background: #fff;
+   border: 0;
+   height: 40px;
+   width: 650px;
+   border-radius: 5px;
+   padding: 3px 20px;
+   font-size: 1.4rem;
+   position: relative;
+   display: inline-block;
+   margin-top: 15px;
+   text-align: left;
+   line-height: 40px;
+}
+.btn-remove {
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+.container {
+   /*background: skyblue;*/
+   /*width: 650px;*/
+   min-width: 650px;
+   /*max-width: 650px;*/
+}
+
+.title {
+   color: #fff;
+   font-size: 3rem;
+   margin: 0 0 50px 0;
+   /*font-weight: 500;*/
+}
+
+.a11y-hidden{
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0,0,0,0);
+    border: 0;
+    padding: 0;
+    margin: -1px;
+    position: absolute;
+}
+.todo-add-form {
+   position: relative;
+   /*background: rebeccapurple;*/
+}
+
+.todo-add-form input{
+   border: 0;
+   height: 40px;
+   width: 650px;
+   border-radius: 5px;
+   padding: 3px 20px;
+   font-size: 1.4rem;
+}
+/*.todo-add-form label {
+   border: 0;
+   height: 40px;
+   width: 650px;
+   border-radius: 5px;
+   padding: 3px 20px;
+   font-size: 1.4rem;
+}*/
+.btn {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+}
+.btn-add{
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   position: absolute;
+   top: 3px;
+   right: 240px;
+   font-size: 2rem;
+   color: #fff;
+   background: #43C6AC;
+   border: 0;
+   cursor: pointer;
+   order: -10;
+}
+.btn-add:hover {
+  font-size: 2.7rem;
+}
+.btn-remove {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   position: absolute;
+   top: 3px;
+   right: 10px;
+   font-size: 2rem;
+   color: #fff;
+   background: #191654;
+   border: 0;
+   cursor: pointer;
+}
+.btn-remove:hover {
+  font-size: 2.7rem;
+}
+.btn-remove-all {
+   width: 690px;
+   height: 46px;
+   border-radius: 5px;
+   font-size: 1.4rem;
+   margin-top: 15px;
+   border: 0;
+   background: #aaa;
+   color: #fff;
+   cursor: pointer;
+}
+.btn-remove-all:hover {
+  background: #191654;
+  /*font-size: 1.5rem;*/
+}

@@ -1,0 +1,10 @@
+{
+   "version": "0.2.0",
+   "configurations": [
+      {
+         "type": "chrome",
+         "name": "Attach to Chrome",
+         "file": "${workspaceRoot}/todolist/index.html"
+      }
+   ]
+}
