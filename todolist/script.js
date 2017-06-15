@@ -24,6 +24,10 @@
    var btn_remove_all = _.createEl('button','모두삭제');
    btn_remove_all.setAttribute('class','btn-remove-all');
    btn_remove_all.setAttribute('type','button');
+   // console.log(btn_remove_all.getAttribute('class'));
+   // btn_remove_all.getAttribute('class') + ' ' + 'btn';
+   var new_btn = btn_remove_all.getAttribute('class') + ' ' + 'btn';
+   btn_remove_all.setAttribute('class',new_btn);
 
    _.appendChild(todo_body,todo_list);
    _.appendChild(todo_body,btn_remove_all);
@@ -33,9 +37,6 @@
    btn_add.onclick = todoAdd;
    btn_remove_all.onclick = todoRemoveAll;
 
-   // function addClass(classname) {
-      
-   // }
 
    function todoAdd(todo) {
       var todo = _.tag('input');
