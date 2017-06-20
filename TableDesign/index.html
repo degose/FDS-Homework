@@ -12,13 +12,13 @@
     <div class="dashboard-bg">
       <div class="wrapper">
         <div class="col is-2">
-          <h1 class="logo">
+          <h1 class="logo a11y-hidden">
             <a href="index.html">QUANTUM</a>
           </h1>
         </div>
         <div class="col is-4">
           <nav class="navigation">
-            <h2 class="header-heading">메인 메뉴</h2>
+            <h2 class="header-heading a11y-hidden">메인 메뉴</h2>
             <ul class="main-menu">
               <li><a href="#">Dashboard</a></li>
               <li><a href="#">Statistics</a></li>
@@ -29,7 +29,7 @@
         </div>
         <div class="col is-3">
           <form class="search-form">
-            <label for="">검색</label>
+            <label for="" class="a11y-hidden">검색</label>
             <input type="text" name="" value="">
             <button type="" class="search-btn">검색</button>
           </form>
@@ -52,6 +52,33 @@
       </div>
     </div>
   </header>
+  <main class="main">
+    <div class="wrapper">
+      <div class="col is-12">
+        <h1 class="main-heading a11y-hidden">메인 영역</h1>
+        <table>
+          <thead>
+            <tr>
+              <th><button type="submit">COMPOSE</button></th>
+              <th>menu</th>
+              <th>search</th>
+              <th>navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>side-menu</td>
+              <td>mail-list</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <navigation></navigation>
+
+
+
   <script src="./js/toggleGrid.js"></script>
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"

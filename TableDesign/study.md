@@ -50,8 +50,7 @@ table-layout: fixed;
 
 
 #### susy 파일을 다 세팅하고 html파일을 열었는데 그리드가 보이지 않는다면...
-#### header부분 배경은 table 밖으로 나가야 하는데 어떻게?
-#### main 부분은 기존 table 12 col로 나눈 그리드에 벗어나는데 어쩜?
-- table를 새로 만들어서 새로운 비율?로 적용
-#### colspan 안먹음..
-#### 여백 row를 따로 만들었는데 스크린리더기에 읽히진 않는지?
+- wrapper(전체 감싸주는 영역)에 `@include container(width);`를 줘야함
+#### susy 그리드가 설정한 거터, 컬럼 값과 맞지 않는다면
+
+#### fieldset 안에 form이 있는 경우, form안에 fieldset이 있는 경우
