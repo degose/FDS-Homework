@@ -8,14 +8,59 @@
   <link rel="stylesheet" href="./css/modules/style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <h1 class="logo">
-        <a href="index.html">
-        </a>
-      </h1>
-    </header>
-
-  </div>
+  <header>
+    <div class="dashboard-bg">
+      <div class="wrapper">
+        <div class="col is-2">
+          <h1 class="logo">
+            <a href="index.html">QUANTUM</a>
+          </h1>
+        </div>
+        <div class="col is-4">
+          <nav class="navigation">
+            <h2 class="header-heading">메인 메뉴</h2>
+            <ul class="main-menu">
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Statistics</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><button type="">더보기</button></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col is-3">
+          <form class="search-form">
+            <label for="">검색</label>
+            <input type="text" name="" value="">
+            <button type="" class="search-btn">검색</button>
+          </form>
+        </div>
+        <div class="col is-3">
+          <div class="alam-icon"></div>
+          <div class="user-profile">
+            <img src="./css/image/10m.jpeg" alt="">
+            <p class="user-name">RonaldHenry</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="col">
+        breadcrumbs
+      </div>
+      <div class="col">
+        title
+      </div>
+    </div>
+  </header>
+  <script src="./js/toggleGrid.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+      $(".filter-bg").click(function(e){
+        $(".filter-bg").toggleClass(".filter-bg:active");
+      });
+  </script>
 </body>
 </html>

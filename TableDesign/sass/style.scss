@@ -5,7 +5,3 @@
 @import "partials/mixin";
 @import "partials/init";
 @import "partials/layout"; 
-
-.wrapper {
-   @include container(960px);
-}

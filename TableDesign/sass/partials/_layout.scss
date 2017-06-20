@@ -1,84 +1,100 @@
 // ! layout 2017 gose
 
-// @import "partials/init";
-$row-height: 30px;
+.show-grid
+.#{$toggle-classname} {
+  position: relative;
+}
+.#{$toggle-classname}::before,
+.#{$toggle-classname}::after {
+  content: '';
+  position: absolute;
+  top: 0; 
+  height: $guide-height;
+}
+.#{$toggle-classname}::before {
+  // 지역 변수
+  $leading-limit: $row-height - 1;
 
+  z-index: 10000;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent $leading-limit,
+    #0cf $leading-limit
+  );
+  background-size: 1px $row-height;
+} 
+.#{$toggle-classname}::after {
+  $full-width: $column-width + $gutter-width;
+  z-index: 10010;
+  left: 50%;
+  width: $page-width;
+  background: linear-gradient(
+    90deg,
+    transparent $half-gutter-width,
+    $column-color $half-gutter-width,
+    $column-color $column-width + $half-gutter-width,
+    transparent $column-width + $half-gutter-width
+  );
+  background-size: $full-width 1px;
+  transform: translateX(-50%);
+}
 
 .wrapper{
-    background: silver;
-    padding: 0 153px;
-    height: 300vh;
+  background: silver;
+  height: 300vh;
+  width: $page-width;
+  margin-left: auto;
+  margin-right: auto;
+  @include container(1176px);
+}
+.row {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  // Nesting Row Module
+  // 중첩 로우(행) 모듈
+  // .row.is-nesting
+  &.is-nesting {
+    & > :first-child { margin-left: 0; }
+    & > :last-child { margin-right: 0; }
+  }
+  // Isolate Row Module
+  // 격리된 로우(행) 모듈 - 컬럼에 설정
+  // .is-isolate
+  &.is-isolate .col {
+    margin-right: -100%;
+  }
+}
+.col {
+  float: left;
+  margin-left: $half-gutter-width;
+  margin-right: $half-gutter-width;
+  background: yellow;
 }
 
-h2{
-    background: red;
+@for $i from 1 through $columns {
+  .is-#{$i}  {
+    width: column-width($i);
+  }
+  // Offeset Module
+  // 컬럼 핸들링 모듈
+  // .is-offset-*
+  $offset-width: offset-width($i);
+  .is-offset-#{$i} {
+    margin-left: $offset-width;
+    .is-nesting &:first-child {
+      margin-left: $offset-width - $half-gutter-width;
+    }
+  }
+  @if $i > 1{
+    $ii: $i - 1;
+    .is-isolate > .order-#{$ii},
+    .is-isolate > .o-#{$ii} {
+      margin-left: order-width($ii);
+    }
+  }
 }
-
-table{
-    border: 0;
-    background: yellow;
-    border-collapse: collapse;
-    table-layout: fixed;
-    padding: 0;
-    border-spacing: 10px;// 이거 뭐지..
-
-}
-.body-table{
-    width: 1142px;
-}
-
-td{
-    background: skyblue;
-    //width: 95.1px;// (1448 - (153*2)) / 12 = 95.16...
-    border: 1px solid #444;
-    padding: 0;
-}
-
-tr{
-    background: pink;
-    // height: 30px;
-}
-
-.navigater-row{
-    height: $row-height * 3;
-}
-.empty-row{
-    height: $row-height;
-}
-.breadcrumbs{
-    height: $row-height;
-}
-.main-header-row{
-    height: $row-height * 3;
-}
-// .sidebar{
-//     width: 224px;
-// }
-.sidebar-table{
-    width: 212px;
-    height: $row-height * 16;
-}
-.list-table{
-    width: 927px;
-}
-.side-btn{
-    width: 224px;
-}
-
-.list-row{
-    height: $row-height * 2;
-}
-
-
-.side-nav{
-    position: absolute;
-    top: $row-height * 3;
-    left: 0;
-}
-
-.main-table{
-    width: 1142px;
-}
-// .main-title{
-//     height: $row-height;
-// } - 왜 이거주니까 상단에도 여백이 생길까??
