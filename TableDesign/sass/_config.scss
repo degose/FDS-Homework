@@ -50,13 +50,13 @@ $susy: (
 
   // Gutters
   // 거터의 폭 설정 (1/4, <gutter-width>/<column-width>)
-  gutters: .25,
+  gutters: .30,
 
   // [Column Width]
   // 컬럼의 가로 폭 설정
   // 설정 가능한 값: ( false, null, <length> )
   // 기본 값: false
-  column-width: false,
+  column-width: 68,
 
   // [Global Box Sizing]
   // 전역 CSS3 박스 사이즈 설정
