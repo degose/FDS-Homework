@@ -1,5 +1,12 @@
 /* ! init 모듈*/
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+// @import "settings";
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 html {
   box-sizing: border-box;
   overflow-y: scroll;
@@ -11,10 +18,34 @@ body {
   font-size: 1.4rem; /* 14px */
   line-height: 1.5;  /* 21px */
   // position: relative;
+  // padding-top: $row-height;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.a11y-hidden {
+  overflow: hidden;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+}
+
+%profile-avatar {
+  // background-image: url('../../css/image/10m.jpeg');
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
 }

@@ -12,7 +12,7 @@
     <div class="dashboard-bg">
       <div class="wrapper">
         <div class="col is-2">
-          <h1 class="logo a11y-hidden">
+          <h1 class="logo">
             <a href="index.html">QUANTUM</a>
           </h1>
         </div>
@@ -23,32 +23,36 @@
               <li><a href="#">Dashboard</a></li>
               <li><a href="#">Statistics</a></li>
               <li><a href="#">Pages</a></li>
-              <li><button type="">더보기</button></li>
+              <li><button class="btn-more-main-menu" type="submit">더보기</button></li>
             </ul>
           </nav>
         </div>
         <div class="col is-3">
           <form class="search-form">
-            <label for="" class="a11y-hidden">검색</label>
-            <input type="text" name="" value="">
+            <label for="search" class="a11y-hidden">검색</label>
+            <input type="text" name="search" value="">
             <button type="" class="search-btn">검색</button>
           </form>
         </div>
-        <div class="col is-3">
-          <div class="alam-icon"></div>
-          <div class="user-profile">
-            <img src="./css/image/10m.jpeg" alt="">
-            <p class="user-name">RonaldHenry</p>
-          </div>
+        <div class="user-aria col is-3">
+          <div class="alram-icon">알람</div>
+          <img src="./css/image/10m.jpeg" alt="">
+          <p class="user-name">RonaldHenry</p>
         </div>
       </div>
     </div>
     <div class="wrapper">
-      <div class="col">
-        breadcrumbs
-      </div>
-      <div class="col">
-        title
+      <div class="title-container">
+        <div class="col is-12">
+          <h1 class="a11y-hidden">directory</h1>
+          <ul class="directory-list">
+            <li>Dashboard</li>
+            <li>Mails</li>
+          </ul>
+        </div>
+        <div class="col is-12">
+          <h1 class="mail-heading">Mailbox CRM</h1>
+        </div>
       </div>
     </div>
   </header>

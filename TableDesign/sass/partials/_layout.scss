@@ -42,7 +42,7 @@
 }
 
 .wrapper{
-  background: silver;
+  // background: silver;
   height: 300vh;
   width: $page-width;
   margin-left: auto;
@@ -73,7 +73,7 @@
   float: left;
   margin-left: $half-gutter-width;
   margin-right: $half-gutter-width;
-  background: yellow;
+  // background: yellow;
 }
 
 @for $i from 1 through $columns {

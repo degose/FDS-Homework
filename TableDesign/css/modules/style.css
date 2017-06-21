@@ -4,6 +4,12 @@
  * http://susydocs.oddbird.net/en/latest/settings/#global-defaults
  */
 /* ! init 모듈*/
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 html {
   box-sizing: border-box;
   overflow-y: scroll;
@@ -22,6 +28,78 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.a11y-hidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.user-aria img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .show-grid .show-grid {
@@ -54,7 +132,6 @@ body {
 }
 
 .wrapper {
-  background: silver;
   height: 300vh;
   width: 1176px;
   margin-left: auto;
@@ -137,7 +214,6 @@ head:hover ~ body .wrapper:before {
   float: left;
   margin-left: 15px;
   margin-right: 15px;
-  background: yellow;
 }
 
 .is-1 {
@@ -337,6 +413,183 @@ head:hover ~ body .wrapper:before {
 .is-isolate > .order-11,
 .is-isolate > .o-11 {
   margin-left: 995px;
+}
+
+/* ! init 모듈*/
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  /* 14px */
+  line-height: 1.5;
+  /* 21px */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.a11y-hidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.user-aria img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.dashboard-bg {
+  height: 90px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.01), 0 6px 6px rgba(0, 0, 0, 0.01);
+}
+
+.logo a {
+  font-size: 1.7rem;
+  color: #666666;
+  font-weight: 700;
+  line-height: 90px;
+  text-align: center;
+  display: block;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: row;
+  line-height: 90px;
+  justify-content: space-around;
+}
+
+.main-menu li {
+  color: #b3b3b3;
+  font-weight: 500;
+}
+
+.main-menu li:hover {
+  color: #666666;
+}
+
+.main-menu button {
+  background-image: url("../../css/image/btn-more.svg") no-repeat;
+  border: 0;
+  width: 18px;
+  height: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.search-form {
+  line-height: 90px;
+  text-align: center;
+  position: relative;
+}
+
+.search-form input {
+  border-radius: 30px;
+  border-style: none;
+  border: 3px solid #f5f5f5;
+  padding: 17px 23px;
+  color: #b3b3b3;
+  width: 193px;
+}
+
+.search-form button {
+  border: 0;
+  background-image: url("../../css/image/btn-search.svg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  margin-top: 13px;
+  overflow: hidden;
+}
+
+.user-aria {
+  line-height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.user-aria .alram-icon {
+  background-image: url("../../css/image/ico-alram.svg");
+  width: 16px;
+  height: 20px;
+  margin-top: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.user-aria .alram-icon::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #1875f0;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.user-aria p {
+  display: inline-block;
+  color: #808080;
+}
+
+.title-container {
+  width: 100%;
+  height: 180px;
+  border-radius: 7px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.01), 0 6px 6px rgba(0, 0, 0, 0.01);
+}
+
+.directory-list {
+  margin-top: 60px;
+  line-height: 30px;
+  display: flex;
+}
+
+.directory-list li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.directory-list li::after {
+  content: "";
+  display: block;
+}
+
+.mail-heading {
+  margin-top: 30px;
+  line-height: 30px;
+  font-size: 3.6rem;
+  color: #808080;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=../../map/style.css.map */

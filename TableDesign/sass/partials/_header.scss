@@ -1,0 +1,132 @@
+// ! TableDesign header.scss
+@import "init";
+
+.dashboard-bg {
+  height: $row-height * 3;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.01), 0 6px 6px rgba(0,0,0,0.01);
+}
+
+.logo a {
+  font-size: 1.7rem;
+  color: $base-color-1;
+  font-weight: 700;
+  line-height: $row-height * 3;
+  text-align: center;
+  display: block;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: row;
+  line-height: $row-height * 3;
+  justify-content: space-around;
+  li {
+    // font-size: 1.2rem;
+    color: $base-color-2;
+    font-weight: 500;
+  }
+  li:hover {
+    color: $base-color-1;
+  }
+  button {
+    background-image: url('../../css/image/btn-more.svg') no-repeat;
+    // background-size: 18px;
+    border: 0;
+    width: 18px;
+    height: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+}
+// .btn-more-main-menu {
+//   background-image: ;
+// }
+
+.search-form {
+  line-height: $row-height * 3;
+  text-align: center;
+  position: relative;
+  input {
+    border-radius: 30px;
+    border-style: none;
+    border: 3px solid $base-color-3;
+    padding: 17px 23px;
+    color: $base-color-2;
+    width: 193px;
+  }
+  button {
+    border: 0;
+    background-image: url('../../css/image/btn-search.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    margin-top: 13px;
+    overflow: hidden;
+  }
+}
+
+
+.user-aria {
+  line-height: $row-height * 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .alram-icon {
+    background-image: url('../../css/image/ico-alram.svg');
+    width: 16px;
+    height: 20px;
+    margin-top: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+  .alram-icon::before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: $point-color-1;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    // bottom: -5px;
+    // left: -5px;
+  }
+  img {
+    @extend %profile-avatar;
+  }
+  p {
+    display: inline-block;
+    color: $base-color-4;
+  }
+}
+
+.title-container {
+  width: 100%;
+  height: $row-height * 6;
+  border-radius: 7px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.01), 0 6px 6px rgba(0,0,0,0.01);
+}
+
+.directory-list {
+  margin-top: $row-height * 2;
+  line-height: $row-height;
+  display: flex;
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  li::after {
+    content: "";
+    display: block;
+  }
+}
+.mail-heading {
+  margin-top: $row-height;
+  line-height: $row-height;
+  font-size: 3.6rem;
+  color: $base-color-4;
+  font-weight: 300;
+}
