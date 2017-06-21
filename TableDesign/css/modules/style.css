@@ -132,7 +132,6 @@ table {
 }
 
 .wrapper {
-  height: 300vh;
   width: 1176px;
   margin-left: auto;
   margin-right: auto;
@@ -468,7 +467,7 @@ a {
 }
 
 .logo a {
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: #666666;
   font-weight: 700;
   line-height: 90px;
@@ -493,12 +492,13 @@ a {
 }
 
 .main-menu button {
-  background-image: url("../../css/image/btn-more.svg") no-repeat;
+  background: url("../../css/image/btn-more.svg");
   border: 0;
   width: 18px;
   height: 5px;
   margin-top: 5px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .search-form {
@@ -511,21 +511,23 @@ a {
   border-radius: 30px;
   border-style: none;
   border: 3px solid #f5f5f5;
-  padding: 17px 23px;
+  padding: 17px 50px;
   color: #b3b3b3;
+  font-size: 1.2rem;
   width: 193px;
 }
 
 .search-form button {
   border: 0;
-  background-image: url("../../css/image/btn-search.svg");
+  background: url("../../css/image/btn-search.svg");
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 24px;
+  left: 60px;
   width: 13px;
   height: 13px;
   margin-top: 13px;
   overflow: hidden;
+  font-size: 0.5rem;
 }
 
 .user-aria {
@@ -571,17 +573,20 @@ a {
 .directory-list {
   margin-top: 60px;
   line-height: 30px;
-  display: flex;
 }
 
 .directory-list li {
   display: inline-block;
-  margin-right: 10px;
+  color: #c1c1c1;
 }
 
 .directory-list li::after {
   content: "";
-  display: block;
+  display: inline-block;
+  background: url("../../css/image/ico-arrow.svg");
+  width: 5px;
+  height: 8px;
+  margin: 0 15px 1px 15px;
 }
 
 .mail-heading {
@@ -590,6 +595,97 @@ a {
   font-size: 3.6rem;
   color: #808080;
   font-weight: 300;
+}
+
+.main {
+  margin-top: 30px;
+  background: yellow;
+  width: 100%;
+  height: 870px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.01), 0 6px 6px rgba(0, 0, 0, 0.01);
+  border-radius: 7px;
+}
+
+.main div {
+  padding: 0;
+}
+
+table {
+  width: 100%;
+}
+
+table thead {
+  line-height: 88px;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+table thead th {
+  border-right: 2px solid #f5f5f5;
+  margin: 0;
+}
+
+table thead :last-child {
+  border-right: none;
+  margin: 0;
+}
+
+table tbody .side-menu, table tbody .status-info {
+  border-right: 2px solid #f5f5f5;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+table tbody .side-menu :last-child, table tbody .status-info :last-child {
+  border-bottom: none;
+}
+
+table tbody .mail-list {
+  line-height: 58px;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+table tbody .mail-list :last-child {
+  border-bottom: none;
+}
+
+.btn-mail-compose-container {
+  width: 223px;
+}
+
+.btn-mail-compose-container .btn-mail-compose {
+  background: #1875f0;
+  box-shadow: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 20px 58px;
+  cursor: pointer;
+}
+
+.mail-menu-container {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 380px;
+  margin: 0 !important;
+  padding: 0;
+}
+
+.mail-search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 249px;
+  display: block;
+}
+
+.mail-navigation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 238px;
 }
 
 /*# sourceMappingURL=../../map/style.css.map */

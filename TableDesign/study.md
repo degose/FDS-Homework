@@ -54,3 +54,5 @@ table-layout: fixed;
 #### susy 그리드가 설정한 거터, 컬럼 값과 맞지 않는다면
 
 #### fieldset 안에 form이 있는 경우, form안에 fieldset이 있는 경우
+
+#### table thead가 정해지면 tbody는 thead의 td수만큼 사용 할 수 있는것?

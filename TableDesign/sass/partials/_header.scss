@@ -1,13 +1,17 @@
 // ! TableDesign header.scss
 @import "init";
 
+// head {
+//   position: fixed;
+// }
+
 .dashboard-bg {
   height: $row-height * 3;
   box-shadow: 0 3px 3px rgba(0,0,0,0.01), 0 6px 6px rgba(0,0,0,0.01);
 }
 
 .logo a {
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: $base-color-1;
   font-weight: 700;
   line-height: $row-height * 3;
@@ -29,13 +33,13 @@
     color: $base-color-1;
   }
   button {
-    background-image: url('../../css/image/btn-more.svg') no-repeat;
-    // background-size: 18px;
+    background: url('../../css/image/btn-more.svg');
     border: 0;
     width: 18px;
     height: 5px;
     margin-top: 5px;
     overflow: hidden;
+    cursor: pointer;
   }
 }
 // .btn-more-main-menu {
@@ -50,20 +54,25 @@
     border-radius: 30px;
     border-style: none;
     border: 3px solid $base-color-3;
-    padding: 17px 23px;
+    padding: 17px 50px;
     color: $base-color-2;
+    font-size: 1.2rem;
     width: 193px;
+    // [placeholder="Search"] {
+    //   color: $base-color-2;
+    // }
   }
   button {
     border: 0;
-    background-image: url('../../css/image/btn-search.svg');
+    background: url('../../css/image/btn-search.svg');
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 24px;
+    left: 60px;
     width: 13px;
     height: 13px;
     margin-top: 13px;
     overflow: hidden;
+    font-size: 0.5rem;
   }
 }
 
@@ -113,14 +122,20 @@
 .directory-list {
   margin-top: $row-height * 2;
   line-height: $row-height;
-  display: flex;
+  // display: flex;
+  // flex-direction: row;
   li {
     display: inline-block;
-    margin-right: 10px;
+    // margin-right: 10px;
+    color: $base-color-5;
   }
   li::after {
     content: "";
-    display: block;
+    display: inline-block;
+    background: url('../../css/image/ico-arrow.svg');
+    width: 5px;
+    height: 8px;
+    margin: 0 15px 1px 15px;
   }
 }
 .mail-heading {

@@ -1,0 +1,90 @@
+// ! TableDesign main.scss
+
+.main {
+  margin-top: $row-height;
+  background: yellow;
+  width: 100%;
+  height: $row-height * 29;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.01), 0 6px 6px rgba(0,0,0,0.01);
+  border-radius: 7px;
+  div {
+    // margin: 0;
+    padding: 0;
+  }
+}
+table {
+  // border: 1px solid $base-color-5;
+  width: 100%;
+  // width: -100;
+  $table-border-style : 2px solid $base-color-3;
+  thead {
+    line-height: ($row-height * 3) - 2;
+    border-bottom: $table-border-style;
+    th {
+      border-right: $table-border-style;
+      margin: 0;
+    }
+    :last-child {
+      border-right: none;
+      margin: 0;
+    }
+  }
+  tbody {
+    .side-menu, .status-info {
+      border-right: $table-border-style;
+      border-bottom: $table-border-style;
+      :last-child {
+        border-bottom: none;
+      }
+    }
+    .mail-list {
+      line-height: ($row-height * 2) - 2;
+      border-bottom: $table-border-style;
+      :last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+.btn-mail-compose-container {
+  width: 223px;
+  .btn-mail-compose {
+    background: $point-color-1;
+    box-shadow: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 20px 58px;
+    cursor: pointer;
+  }
+}
+.mail-menu-container {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 380px;
+  margin: 0 !important;
+  padding: 0;
+}
+
+.mail-search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 249px;
+  display: block;
+}
+
+.mail-navigation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 238px;
+}
+
+%mail-list-style{
+  display: flex;
+}
