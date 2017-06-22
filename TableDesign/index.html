@@ -60,6 +60,7 @@
     <main class="main">
         <h1 class="main-heading a11y-hidden">메인 영역</h1>
         <table>
+          <caption class="a11y-hidden">메일 목록</caption>
           <thead>
             <tr>
               <th class="btn-mail-compose-container"><button type="submit" class="btn-mail-compose">COMPOSE</button></th>
@@ -100,7 +101,7 @@
               </th>
               <th class="mail-navigation-container">
                 <p><span>1-10</span>of<span>100</span></p>
-                <fieldset>
+                <!--<fieldset class="btn-prev-next-gruop">
                   <form>
                     <label for="" class="a11y-hidden">이전 페이지</label>
                     <input type="submit" name="" value="">
@@ -109,14 +110,46 @@
                     <label for="" class="a11y-hidden">다음 페이지</label>
                     <input type="submit" name="" value="">
                   </form>
-                </fieldset>
-                <button type="submit">메일 설정</button>
+                </fieldset>-->
+                <button type="submit">이전 페이지</button>
+                <button type="submit">다음 페이지</button>
+                <button type="submit" class="btn-mail-setting">메일 설정</button>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td rowspan="4" class="side-menu">side-menu</td>
+              <td rowspan="4" class="side-menu">
+                <ul class="side-menu-list">
+                  <li>
+                    <form>
+                      <input type="submit" name="" value="">
+                      <label for="">inbox</label>
+                      <div class="">4</div>
+                    </form>
+                  </li>
+                  <li>
+                    <form>
+                      <input type="submit" name="" value="">
+                      <label for="">draft</label>
+                      <div class="">1</div>
+                    </form>
+                  </li>
+                  <li>
+                    <form>
+                      <input type="submit" name="" value="">
+                      <label for="">Sant Mail</label>
+                    </form>
+                  </li>
+                  <li>
+                    <form>
+                      <input type="submit" name="" value="">
+                      <label for="">Trash</label>
+                      <div class="">21</div>
+                    </form>
+                  </li>
+                </ul>
+              </td>
               <td colspan="3" class="mail-list">mail-list</td>
             </tr>
             <tr>
@@ -129,7 +162,14 @@
               <td colspan="3" class="mail-list">mail-list</td>
             </tr>
             <tr>
-              <td rowspan="9" class="status-info">status</td>
+              <td rowspan="9" class="category-info">
+                <ul class="category">
+                  <li class="category-1">Project</li>
+                  <li class="category-2">Web</li>
+                  <li class="category-3">Home</li>
+                  <li class="category-4">Work</li>
+                </ul>
+              </td>
               <td colspan="3" class="mail-list">mail-list</td>
             </tr>
             <tr>

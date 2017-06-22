@@ -34,6 +34,20 @@ a {
   text-decoration: none;
 }
 
+a :visited {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  box-shadow: none;
+  border: none;
+}
+
+input {
+  border: 0;
+}
+
 .a11y-hidden {
   overflow: hidden;
   position: absolute;
@@ -443,6 +457,20 @@ a {
   text-decoration: none;
 }
 
+a :visited {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  box-shadow: none;
+  border: none;
+}
+
+input {
+  border: 0;
+}
+
 .a11y-hidden {
   overflow: hidden;
   position: absolute;
@@ -482,18 +510,17 @@ a {
   justify-content: space-around;
 }
 
-.main-menu li {
+.main-menu li a {
   color: #b3b3b3;
   font-weight: 500;
 }
 
-.main-menu li:hover {
+.main-menu li a:hover {
   color: #666666;
 }
 
 .main-menu button {
   background: url("../../css/image/btn-more.svg");
-  border: 0;
   width: 18px;
   height: 5px;
   margin-top: 5px;
@@ -518,7 +545,6 @@ a {
 }
 
 .search-form button {
-  border: 0;
   background: url("../../css/image/btn-search.svg");
   position: absolute;
   top: 24px;
@@ -564,20 +590,28 @@ a {
 }
 
 .title-container {
-  width: 100%;
+  width: 1146px;
+  margin: 30px 15px 0;
   height: 180px;
   border-radius: 7px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.01), 0 6px 6px rgba(0, 0, 0, 0.01);
 }
 
 .directory-list {
-  margin-top: 60px;
+  margin-top: 30px;
+  margin-left: 20px;
   line-height: 30px;
+  display: flex;
+  flex-direction: row;
 }
 
-.directory-list li {
+.directory-list li a {
   display: inline-block;
   color: #c1c1c1;
+}
+
+.directory-list li a:hover {
+  color: #666666;
 }
 
 .directory-list li::after {
@@ -591,6 +625,7 @@ a {
 
 .mail-heading {
   margin-top: 30px;
+  margin-left: 20px;
   line-height: 30px;
   font-size: 3.6rem;
   color: #808080;
@@ -598,9 +633,9 @@ a {
 }
 
 .main {
-  margin-top: 30px;
+  margin: 30px 15px 0;
   background: yellow;
-  width: 100%;
+  width: 1146px;
   height: 870px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.01), 0 6px 6px rgba(0, 0, 0, 0.01);
   border-radius: 7px;
@@ -611,31 +646,36 @@ a {
 }
 
 table {
-  width: 100%;
+  width: 1146px;
+  table-layout: fixed;
 }
 
 table thead {
-  line-height: 88px;
+  height: 90px;
   border-bottom: 2px solid #f5f5f5;
 }
 
 table thead th {
   border-right: 2px solid #f5f5f5;
-  margin: 0;
+  line-height: 88px;
 }
 
 table thead :last-child {
   border-right: none;
-  margin: 0;
 }
 
-table tbody .side-menu, table tbody .status-info {
+table tbody .side-menu {
   border-right: 2px solid #f5f5f5;
   border-bottom: 2px solid #f5f5f5;
+  vertical-align: middle;
 }
 
-table tbody .side-menu :last-child, table tbody .status-info :last-child {
+table tbody .side-menu :last-child {
   border-bottom: none;
+}
+
+table tbody .category-info {
+  border-right: 2px solid #f5f5f5;
 }
 
 table tbody .mail-list {
@@ -653,8 +693,6 @@ table tbody .mail-list :last-child {
 
 .btn-mail-compose-container .btn-mail-compose {
   background: #1875f0;
-  box-shadow: none;
-  border: none;
   font-size: 1.2rem;
   color: #fff;
   font-weight: 600;
@@ -664,28 +702,23 @@ table tbody .mail-list :last-child {
 }
 
 .mail-menu-container {
-  display: block;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 380px;
-  margin: 0 !important;
-  padding: 0;
 }
 
 .mail-search-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   width: 249px;
-  display: block;
 }
 
 .mail-navigation-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  width: 238px;
+}
+
+.mail-navigation-container .btn-prev-next-gruop {
+  display: flex;
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=../../map/style.css.map */

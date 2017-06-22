@@ -24,17 +24,16 @@
   flex-direction: row;
   line-height: $row-height * 3;
   justify-content: space-around;
-  li {
+  li a{
     // font-size: 1.2rem;
     color: $base-color-2;
     font-weight: 500;
   }
-  li:hover {
+  li a:hover {
     color: $base-color-1;
   }
   button {
     background: url('../../css/image/btn-more.svg');
-    border: 0;
     width: 18px;
     height: 5px;
     margin-top: 5px;
@@ -42,9 +41,6 @@
     cursor: pointer;
   }
 }
-// .btn-more-main-menu {
-//   background-image: ;
-// }
 
 .search-form {
   line-height: $row-height * 3;
@@ -63,7 +59,6 @@
     // }
   }
   button {
-    border: 0;
     background: url('../../css/image/btn-search.svg');
     position: absolute;
     top: 24px;
@@ -113,21 +108,25 @@
 }
 
 .title-container {
-  width: 100%;
+  width: $page-width - $gutter-width;
+  margin: $row-height $half-gutter-width 0;
   height: $row-height * 6;
   border-radius: 7px;
   box-shadow: 0 3px 3px rgba(0,0,0,0.01), 0 6px 6px rgba(0,0,0,0.01);
 }
 
 .directory-list {
-  margin-top: $row-height * 2;
+  margin-top: $row-height;
+  margin-left: 20px;
   line-height: $row-height;
-  // display: flex;
-  // flex-direction: row;
-  li {
+  display: flex;
+  flex-direction: row;
+  li a{
     display: inline-block;
-    // margin-right: 10px;
     color: $base-color-5;
+  }
+  li a:hover {
+    color: $base-color-1;
   }
   li::after {
     content: "";
@@ -140,6 +139,7 @@
 }
 .mail-heading {
   margin-top: $row-height;
+  margin-left: 20px;
   line-height: $row-height;
   font-size: 3.6rem;
   color: $base-color-4;
