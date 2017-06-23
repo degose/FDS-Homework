@@ -508,11 +508,13 @@ input {
   flex-direction: row;
   line-height: 90px;
   justify-content: space-around;
+  align-items: center;
 }
 
 .main-menu li a {
   color: #b3b3b3;
   font-weight: 500;
+  display: block;
 }
 
 .main-menu li a:hover {
@@ -520,12 +522,13 @@ input {
 }
 
 .main-menu button {
-  background: url("../../css/image/btn-more.svg");
+  background: url("../../css/image/ico-more.svg");
   width: 18px;
-  height: 5px;
-  margin-top: 5px;
+  height: 4px;
+  padding: 4px 0 0 0;
   overflow: hidden;
   cursor: pointer;
+  display: block;
 }
 
 .search-form {
@@ -537,7 +540,7 @@ input {
 .search-form input {
   border-radius: 30px;
   border-style: none;
-  border: 3px solid #f5f5f5;
+  border: 2px solid #f5f5f5;
   padding: 17px 50px;
   color: #b3b3b3;
   font-size: 1.2rem;
@@ -545,15 +548,14 @@ input {
 }
 
 .search-form button {
-  background: url("../../css/image/btn-search.svg");
+  background: url("../../css/image/ico-search.svg");
   position: absolute;
-  top: 24px;
+  top: 38px;
   left: 60px;
   width: 13px;
   height: 13px;
-  margin-top: 13px;
+  padding: 13px 0 0 0;
   overflow: hidden;
-  font-size: 0.5rem;
 }
 
 .user-aria {
@@ -561,27 +563,33 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 
-.user-aria .alram-icon {
-  background-image: url("../../css/image/ico-alram.svg");
-  width: 16px;
-  height: 20px;
-  margin-top: 30px;
-  overflow: hidden;
+.user-aria .alram-group {
   position: relative;
 }
 
-.user-aria .alram-icon::before {
+.user-aria .alram-group .alram-icon {
+  background-image: url("../../css/image/ico-alram.svg");
+  width: 16px;
+  height: 20px;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+.user-aria .alram-group .alram-icon-new {
   content: "";
   width: 6px;
   height: 6px;
+  overflow: hidden;
+  padding-top: 6px;
   background: #1875f0;
   border-radius: 50%;
   display: block;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: -5px;
+  right: -5px;
 }
 
 .user-aria p {
@@ -656,8 +664,8 @@ table thead {
 }
 
 table thead th {
-  border-right: 2px solid #f5f5f5;
   line-height: 88px;
+  vertical-align: middle;
 }
 
 table thead :last-child {
@@ -678,16 +686,17 @@ table tbody .category-info {
   border-right: 2px solid #f5f5f5;
 }
 
-table tbody .mail-list {
+table tbody .mail-list-item {
   line-height: 58px;
   border-bottom: 2px solid #f5f5f5;
 }
 
-table tbody .mail-list :last-child {
+table tbody .mail-list-item :last-child {
   border-bottom: none;
 }
 
 .btn-mail-compose-container {
+  border-right: 2px solid #f5f5f5;
   width: 223px;
 }
 
@@ -701,24 +710,98 @@ table tbody .mail-list :last-child {
   cursor: pointer;
 }
 
-.mail-menu-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.mail-check-container {
+  width: 70px;
+  background: red;
+}
+
+.mail-check-container form {
+  margin-bottom: -10px;
+}
+
+.mail-check-container input[type="checkbox"] + label {
+  display: inline-block;
+  border: 2px solid #f5f5f5;
+  border-radius: 3px;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.mail-check-container label {
+  display: inline-block;
+  border: 2px solid #f5f5f5;
+  border-radius: 3px;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.mail-check-container input[type="checkbox"]:checked + label {
+  background: #1875f0;
+}
+
+.mail-check-container label:after {
+  background: #000 url("../../css/image/ico-checked.svg");
+  content: "";
+  width: 10px;
+  height: 9px;
+}
+
+.mail-check-container input[type="checkbox"] {
+  display: none;
+}
+
+.mail-check-container button {
+  background: url("../../css/image/ico-dropdown.svg");
+  width: 10px;
+  height: 6px;
+  padding: 6px 0 0 0;
+  overflow: hidden;
+}
+
+.btn-mail-reload {
+  background: #fff url("../../css/image/");
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.mail-menu-container .ico-mail {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  background: #fff;
 }
 
 .mail-search-container {
-  width: 249px;
+  border-left: 2px solid #f5f5f5;
+  border-right: 2px solid #f5f5f5;
+  width: 250px;
 }
 
-.mail-navigation-container {
-  display: flex;
-  justify-content: space-around;
+.mail-search-container button {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background: #fff;
 }
 
-.mail-navigation-container .btn-prev-next-gruop {
-  display: flex;
-  flex-direction: row;
+.mail-navigation-container button {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.mail-setting-container button {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  background: #fff;
 }
 
 /*# sourceMappingURL=../../map/style.css.map */

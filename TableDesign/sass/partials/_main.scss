@@ -1,5 +1,6 @@
 // ! TableDesign main.scss
 
+$table-border-style : 2px solid $base-color-3;
 .main {
   margin: $row-height $half-gutter-width 0;
   background: yellow;
@@ -12,12 +13,12 @@
     padding: 0;
   }
 }
+
 table {
   width: $page-width - $gutter-width;
   // width: -100;
   // display: table;
   table-layout: fixed;
-  $table-border-style : 2px solid $base-color-3;
   thead {
     // line-height: ($row-height * 3) - 2;
     height: $row-height * 3;
@@ -25,9 +26,8 @@ table {
     // display: flex;
     // flex-direction: row;
     th {
-      border-right: $table-border-style;
       line-height: ($row-height * 3) - 2;
-      // vertical-align: middle;
+      vertical-align: middle;
     }
     :last-child {
       border-right: none;
@@ -46,7 +46,7 @@ table {
     .category-info {
       border-right: $table-border-style;
     }
-    .mail-list {
+    .mail-list-item {
       line-height: ($row-height * 2) - 2;
       border-bottom: $table-border-style;
       :last-child {
@@ -56,6 +56,7 @@ table {
   }
 }
 .btn-mail-compose-container {
+  border-right: $table-border-style;
   width: 223px;
   .btn-mail-compose {
     background: $point-color-1;
@@ -67,32 +68,116 @@ table {
     cursor: pointer;
   }
 }
-.mail-menu-container {
-  // display: block;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  // width: 380px;
+.mail-check-container {
+  width: 70px;
+  background: red;
+  form {
+    margin-bottom: -10px;
+  }
+  input[type="checkbox"] + label{
+    display: inline-block;
+    border: 2px solid $base-color-3;
+    border-radius: 3px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  label{
+    display: inline-block;
+    border: 2px solid $base-color-3;
+    border-radius: 3px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  input[type="checkbox"]:checked + label{
+    background: $point-color-1;
+  }
+  label:after {
+    background: #000 url('../../css/image/ico-checked.svg');
+    content: "";
+    width: 10px;
+    height: 9px;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  button {
+    background: url('../../css/image/ico-dropdown.svg');
+    width: 10px;
+    height: 6px;
+    padding: 6px 0 0 0;
+    overflow: hidden;
+  }
 }
 
-.mail-search-container {
+.btn-mail-reload {
+  background: #fff url('../../css/image/');
+  // background-size: 16px;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.mail-menu-container {
+  // display: block;
   // display: flex;
   // flex-direction: row;
   // justify-content: space-around;
-  width: 249px;
-  // display: block;
+  // width: 380px;
+  .ico-mail {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background: #fff;
+  }
+}
+
+.mail-search-container {
+  border-left:  $table-border-style;
+  border-right: $table-border-style;
+  width: 250px;
+  button {
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: #fff;
+  }
 }
 
 .mail-navigation-container {
-  display: flex;
+  // display: flex;
   // flex-direction: row;
-  justify-content: space-around;
+  // justify-content: space-around;
   // width: 238px;
-  .btn-prev-next-gruop {
-    display: flex;
-    flex-direction: row;
+  // width: 130px;
+  button {
+    // display: inline;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background: #fff;
   }
 }
+
+.mail-setting-container {
+  button {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background: #fff;
+  }
+}
+
+
+
+// table body
+
+// mail-list-item
+
 
 %mail-list-style{
   display: flex;

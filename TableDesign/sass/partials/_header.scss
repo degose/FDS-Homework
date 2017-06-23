@@ -24,21 +24,24 @@
   flex-direction: row;
   line-height: $row-height * 3;
   justify-content: space-around;
+  align-items: center;
   li a{
     // font-size: 1.2rem;
     color: $base-color-2;
     font-weight: 500;
+    display: block;
   }
   li a:hover {
     color: $base-color-1;
   }
   button {
-    background: url('../../css/image/btn-more.svg');
+    background: url('../../css/image/ico-more.svg');
     width: 18px;
-    height: 5px;
-    margin-top: 5px;
+    height: 4px;
+    padding: 4px 0 0 0;
     overflow: hidden;
     cursor: pointer;
+    display: block;
   }
 }
 
@@ -49,7 +52,7 @@
   input {
     border-radius: 30px;
     border-style: none;
-    border: 3px solid $base-color-3;
+    border: 2px solid $base-color-3;
     padding: 17px 50px;
     color: $base-color-2;
     font-size: 1.2rem;
@@ -59,15 +62,14 @@
     // }
   }
   button {
-    background: url('../../css/image/btn-search.svg');
+    background: url('../../css/image/ico-search.svg');
     position: absolute;
-    top: 24px;
+    top: 38px;
     left: 60px;
     width: 13px;
     height: 13px;
-    margin-top: 13px;
+    padding: 13px 0 0 0;
     overflow: hidden;
-    font-size: 0.5rem;
   }
 }
 
@@ -77,26 +79,41 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  .alram-icon {
-    background-image: url('../../css/image/ico-alram.svg');
-    width: 16px;
-    height: 20px;
-    margin-top: 30px;
-    overflow: hidden;
+  align-items: center;
+  .alram-group {
     position: relative;
-  }
-  .alram-icon::before{
-    content: "";
-    width: 6px;
-    height: 6px;
-    background: $point-color-1;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    // bottom: -5px;
-    // left: -5px;
+    .alram-icon {
+      background-image: url('../../css/image/ico-alram.svg');
+      width: 16px;
+      height: 20px;
+      padding-top: 20px;
+      overflow: hidden;
+      // position: relative;
+    }
+    // .alram-icon::before{
+    //   content: "";
+    //   width: 6px;
+    //   height: 6px;
+    //   background: $point-color-1;
+    //   border-radius: 50%;
+    //   display: block;
+    //   position: absolute;
+    //   top: 0px;
+    //   right: 0px;
+    // }
+    .alram-icon-new{
+      content: "";
+      width: 6px;
+      height: 6px;
+      overflow: hidden;
+      padding-top: 6px;
+      background: $point-color-1;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: -5px;
+      right: -5px;
+    }
   }
   img {
     @extend %profile-avatar;

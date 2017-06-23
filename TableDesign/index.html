@@ -35,7 +35,10 @@
           </form>
         </div>
         <div class="user-aria col is-3">
-          <div class="alram-icon">알람</div>
+          <div class="alram-group">
+            <div class="alram-icon">알람</div>
+            <div class="alram-icon-new">새로운 알람 표시</div>
+          </div>
           <img src="./css/image/10m.jpeg" alt="">
           <p class="user-name">RonaldHenry</p>
         </div>
@@ -64,34 +67,25 @@
           <thead>
             <tr>
               <th class="btn-mail-compose-container"><button type="submit" class="btn-mail-compose">COMPOSE</button></th>
-              <th class="mail-menu-container">
-                <form class="mail-status-form">
-                  <label for="mail-status" class="a11y-hidden">메일 체크박스</label>
-                  <input type="checkbox" name="mail-status" value="">
-                  <button type="">메일 토글 메뉴</button>
-                </form>
-                <a href="index.html" class="btn-mail-reload">메일 새로고침</a>
-                <form>
-                  <label for="" class="a11y-hidden">파일 다운로드</label>
-                  <input type="submit" name="" value="">
-                </form>
-                <form>
-                  <label for="" class="a11y-hidden">스펨 메일 신고</label>
-                  <input type="submit" name="" value="">
-                </form>
-                <form>
-                  <label for="" class="a11y-hidden">휴지통으로 이동</label>
-                  <input type="submit" name="" value="">
-                </form>
-                <form>
-                  <label for="" class="a11y-hidden">폴더 이동</label>
-                  <input type="submit" name="" value="">
-                </form>
-                <form>
-                  <label for="" class="a11y-hidden">태그 설정</label>
-                  <input type="submit" name="" value="">
+              <th class="mail-check-container">
+                <form class="mail-check-form">
+                  <label for="mail-check"></label>
+                  <input id="mail-check" type="checkbox" name="mail-check" value="">
+                  <button type="submit" class="btn-mail-dropdown">메일 선택 메뉴</button>
                 </form>
               </th>
+              <th></th>
+              <th>
+                <button class="btn-mail-reload">메일 새로고침</button>
+              </th>
+              <th colspan="2" class="mail-menu-container">
+                <button class="ico-mail btn-mail-download" type="submit">다운로드</button>
+                <button class="ico-mail btn-mail-spammail" type="submit">스펨메일 이동</button>
+                <button class="ico-mail btn-mail-trash" type="submit">휴지통으로 이동</button>
+                <button class="ico-mail btn-mail-folder" type="submit">폴더 이동</button>
+                <button class="ico-mail btn-mail-tag" type="submit">태그 설정</button>
+              </th>
+              <th></th>
               <th class="mail-search-container">
                 <form>
                   <label for="" class="a11y-hidden">메일 검색</label>
@@ -99,20 +93,14 @@
                   <button type="">메일 검색</button>
                 </form>
               </th>
-              <th class="mail-navigation-container">
+              <th>
                 <p><span>1-10</span>of<span>100</span></p>
-                <!--<fieldset class="btn-prev-next-gruop">
-                  <form>
-                    <label for="" class="a11y-hidden">이전 페이지</label>
-                    <input type="submit" name="" value="">
-                  </form>
-                  <form>
-                    <label for="" class="a11y-hidden">다음 페이지</label>
-                    <input type="submit" name="" value="">
-                  </form>
-                </fieldset>-->
+              </th>
+              <th class="mail-navigation-container">
                 <button type="submit">이전 페이지</button>
                 <button type="submit">다음 페이지</button>
+              </th>
+              <th class="mail-setting-container">
                 <button type="submit" class="btn-mail-setting">메일 설정</button>
               </th>
             </tr>
@@ -150,16 +138,24 @@
                   </li>
                 </ul>
               </td>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td class="mail-list-item mail-check">체크박스</td>
+              <td class="mail-list-item">별표</td>
+              <td class="mail-list-item">상태</td>
+              <td class="mail-list-item">아바타</td>
+              <td class="mail-list-item">이름</td>
+              <td colspan="2" class="mail-list-item">제목</td>
+              <td class="mail-list-item"></td>
+              <td class="mail-list-item">첨부파일</td>
+              <td class="mail-list-item">날짜</td>
             </tr>
             <tr>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
             <tr>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
             <tr>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
             <tr>
               <td rowspan="9" class="category-info">
@@ -170,31 +166,31 @@
                   <li class="category-4">Work</li>
                 </ul>
               </td>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
             <tr>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
             <tr>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
             <tr>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
             <tr>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
             <tr>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
             <tr>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
             <tr>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
             <tr>
-              <td colspan="3" class="mail-list">mail-list</td>
+              <td colspan="3" class="mail-list-item">mail-list-item</td>
             </tr>
           </tbody>
         </table>
