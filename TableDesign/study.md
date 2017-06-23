@@ -58,3 +58,5 @@ table-layout: fixed;
 #### table thead가 정해지면 tbody는 thead의 td수만큼 사용 할 수 있는것?
 
 #### 자바스크립트에서 새로운 알람이 뜰 때 파란 표시 나게 하려면 css에서 말고 마크업에 파란표시 해줘야 됨?
+
+#### 언제 input a button 을 쓰는게 좋을까?

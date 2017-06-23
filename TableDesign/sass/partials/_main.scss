@@ -1,6 +1,77 @@
 // ! TableDesign main.scss
 
 $table-border-style : 2px solid $base-color-3;
+
+%checkbox-style {
+  input[type="checkbox"] + label{
+    display: inline-block;
+    border: 2px solid $base-color-3;
+    border-radius: 3px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  label{
+    display: inline-block;
+    border: 2px solid $base-color-3;
+    border-radius: 3px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  input[type="checkbox"]:checked + label{
+    background: $point-color-1;
+  }
+  label:after {
+    background: #000 url('../../css/image/ico-checked.svg');
+    content: "";
+    width: 10px;
+    height: 9px;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+}
+
+%star-check-style {
+  input[type="checkbox"] + label {
+    position: absolute;
+    // line-height: row-height(1);
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    padding-top: 20px;
+    background: url('../../css/image/icon-star.svg') no-repeat;
+    background-size: 20px;
+    // right: 20px;
+    // bottom: 23px;
+  }
+  label {
+    // line-height: $row-height * 2;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    padding-top: 20px;
+    background: url('../../css/image/icon-star.svg') no-repeat;
+    background-size: 20px;
+  }
+  input[type="checkbox"]:checked + label {
+    background: url('../../css/image/icon-star.svg') no-repeat;
+    background-position-y: 100%;
+  }
+  input {
+    display: none;
+  }
+}
+
 .main {
   margin: $row-height $half-gutter-width 0;
   background: yellow;
@@ -13,6 +84,8 @@ $table-border-style : 2px solid $base-color-3;
     padding: 0;
   }
 }
+
+// table 기본 설정
 
 table {
   width: $page-width - $gutter-width;
@@ -55,6 +128,9 @@ table {
     }
   }
 }
+
+// thead 컨텐츠
+
 .btn-mail-compose-container {
   border-right: $table-border-style;
   width: 223px;
@@ -70,56 +146,39 @@ table {
 }
 .mail-check-container {
   width: 70px;
-  background: red;
   form {
     margin-bottom: -10px;
+    position: relative;
+    @extend %checkbox-style;
   }
-  input[type="checkbox"] + label{
-    display: inline-block;
-    border: 2px solid $base-color-3;
-    border-radius: 3px;
-    background: #fff;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-  }
-  label{
-    display: inline-block;
-    border: 2px solid $base-color-3;
-    border-radius: 3px;
-    background: #fff;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-  }
-  input[type="checkbox"]:checked + label{
-    background: $point-color-1;
-  }
-  label:after {
-    background: #000 url('../../css/image/ico-checked.svg');
-    content: "";
-    width: 10px;
-    height: 9px;
-  }
-  input[type="checkbox"] {
-    display: none;
-  }
-  button {
+  .btn-mail-dropdown {
     background: url('../../css/image/ico-dropdown.svg');
     width: 10px;
     height: 6px;
     padding: 6px 0 0 0;
     overflow: hidden;
+    margin-left: 5px;
+    position: absolute;
+    top: 35px;
+    right: 7px;
   }
 }
-
-.btn-mail-reload {
-  background: #fff url('../../css/image/');
-  // background-size: 16px;
-  width: 16px;
-  height: 16px;
-  overflow: hidden;
-  margin-top: 16px;
+.btn-mail-reload-container {
+  width: 42px;
+  text-align: center;
+  background: red;
+  // vertical-align: center;
+  .btn-mail-reload {
+    background: url('../../css/image/icons-mail.svg');
+    // background-size: 16px auto;
+    // background-position: 0 0;
+    // display: block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    padding-top: 16px;
+    cursor: pointer;
+  }
 }
 
 .mail-menu-container {
@@ -177,6 +236,29 @@ table {
 // table body
 
 // mail-list-item
+
+
+.mail-check {
+  vertical-align: middle;
+  text-align: center;
+  form {
+    margin-bottom: -8px;
+    @extend %checkbox-style;
+  }
+}
+
+// th 빈 테이블이지만 공간을 지정해 주기 위해서
+.star-check-container {
+  width: 20px;
+}
+.star-check {
+  vertical-align: middle;
+  text-align: center;
+  form {
+    margin-bottom: -8px;
+    @extend %star-check-style;
+  }
+}
 
 
 %mail-list-style{
