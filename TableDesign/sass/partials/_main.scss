@@ -74,7 +74,7 @@ $table-border-style : 2px solid $base-color-3;
 
 .main {
   margin: $row-height $half-gutter-width 0;
-  background: yellow;
+  // background: yellow;
   width: $page-width - $gutter-width;
   height: $row-height * 29;
   box-shadow: 0 3px 3px rgba(0,0,0,0.01), 0 6px 6px rgba(0,0,0,0.01);
@@ -166,13 +166,13 @@ table {
 .btn-mail-reload-container {
   width: 42px;
   text-align: center;
-  background: red;
   // vertical-align: center;
   .btn-mail-reload {
     background: url('../../css/image/icons-mail.svg');
     // background-size: 16px auto;
     // background-position: 0 0;
     // display: block;
+    vertical-align: middle;
     width: 16px;
     height: 16px;
     overflow: hidden;
@@ -182,16 +182,41 @@ table {
 }
 
 .mail-menu-container {
-  // display: block;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-around;
-  // width: 380px;
   .ico-mail {
-    width: 20px;
-    height: 20px;
+    margin: 0 5px;
     overflow: hidden;
-    background: #fff;
+    background: url('../../css/image/icons-mail.svg') no-repeat;
+    vertical-align: middle;
+  }
+  .btn-mail-download {
+    width: 16px;
+    height: 16px;
+    padding-top: 16px;
+    background-position: 0 -16px;
+  }
+  .btn-mail-spammail {
+    width: 18px;
+    height: 18px;
+    padding-top: 18px;
+    background-position: 0 -83px;
+  }
+  .btn-mail-trash {
+    width: 14px;
+    height: 14px;
+    padding-top: 14px;
+    background-position: 0 -51px;
+  }
+  .btn-mail-folder {
+    width: 10px;
+    height: 16px;
+    padding-top: 16px;
+    background-position: 0 -149px;
+  }
+  .btn-mail-tag {
+    width: 18px;
+    height: 18px;
+    padding-top: 18px;
+    background-position: 0 -83px;
   }
 }
 
@@ -199,11 +224,25 @@ table {
   border-left:  $table-border-style;
   border-right: $table-border-style;
   width: 250px;
+  position: relative;
+  input{
+    display: block;
+    width: 100%;
+    height: $row-height * 3;
+    padding: 10px 30px;
+  }
   button {
-    width: 16px;
-    height: 16px;
     overflow: hidden;
-    background: #fff;
+    background: url('../../css/image/icons-mail.svg');
+    width: 17px;
+    height: 17px;
+    padding-top: 17px;
+    background-position:0 -34px;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
   }
 }
 
@@ -215,19 +254,30 @@ table {
   // width: 130px;
   button {
     // display: inline;
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     overflow: hidden;
-    background: #fff;
+    background: url('../../css/image/icons-mail.svg');
+    padding-top: 14px;
+    vertical-align: middle;
+  }
+  .btn-mail-prev {
+    background-position:0 -101px;
+  }
+  .btn-mail-next {
+    background-position:0 -115px;
   }
 }
 
 .mail-setting-container {
   button {
-    width: 20px;
+    width: 19px;
     height: 20px;
+    padding-top: 20px;
     overflow: hidden;
-    background: #fff;
+    background: url('../../css/image/icons-mail.svg');
+    background-position:0 -129px;
+    vertical-align: middle;
   }
 }
 
