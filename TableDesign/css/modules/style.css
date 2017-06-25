@@ -711,6 +711,13 @@ input {
   display: none;
 }
 
+.category-info li {
+  background: red;
+  width: 7px;
+  height: 7px;
+  border-radius: 3px;
+}
+
 .main {
   margin: 30px 15px 0;
   width: 1146px;

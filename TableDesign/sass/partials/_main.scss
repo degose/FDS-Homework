@@ -72,6 +72,13 @@ $table-border-style : 2px solid $base-color-3;
   }
 }
 
+%category-style {
+  background: red;
+  width: 7px;
+  height: 7px;
+  border-radius: 3px;
+}
+
 .main {
   margin: $row-height $half-gutter-width 0;
   // background: yellow;
@@ -287,6 +294,11 @@ table {
 
 // mail-list-item
 
+.category-info {
+  li {
+    @extend %category-style;
+  }
+}
 
 .mail-check {
   vertical-align: middle;
