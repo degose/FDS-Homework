@@ -12,23 +12,15 @@ $table-border-style : 2px solid $base-color-3;
     height: 20px;
     cursor: pointer;
   }
-  label{
-    display: inline-block;
-    border: 2px solid $base-color-3;
-    border-radius: 3px;
-    background: #fff;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-  }
   input[type="checkbox"]:checked + label{
     background: $point-color-1;
-  }
-  label:after {
-    background: #000 url('../../css/image/ico-checked.svg');
-    content: "";
-    width: 10px;
-    height: 9px;
+    border: 2px solid $point-color-1;
+    label:after {
+      background: #000 url('../../css/image/ico-checked.svg');
+      content: "";
+      width: 10px;
+      height: 9px;
+    }
   }
   input[type="checkbox"] {
     display: none;

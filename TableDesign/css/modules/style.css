@@ -652,21 +652,12 @@ input {
   cursor: pointer;
 }
 
-.mail-check-container form label, .mail-check form label {
-  display: inline-block;
-  border: 2px solid #f5f5f5;
-  border-radius: 3px;
-  background: #fff;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
 .mail-check-container form input[type="checkbox"]:checked + label, .mail-check form input[type="checkbox"]:checked + label {
   background: #1875f0;
+  border: 2px solid #1875f0;
 }
 
-.mail-check-container form label:after, .mail-check form label:after {
+.mail-check-container form input[type="checkbox"]:checked + label label:after, .mail-check form input[type="checkbox"]:checked + label label:after {
   background: #000 url("../../css/image/ico-checked.svg");
   content: "";
   width: 10px;

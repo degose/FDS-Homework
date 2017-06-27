@@ -1,0 +1,38 @@
+/* ! replace과제 style.css */
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  background: #fff;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  background: #000;
+  height: 2px;
+}
+
+.left, .right {
+  flex: 1 0 auto;
+  padding: 20px 30px;
+}
+
+.left {
+  background: pink;
+}
+
+.right {
+  background: skyblue;
+}

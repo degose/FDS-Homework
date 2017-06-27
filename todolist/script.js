@@ -63,7 +63,7 @@
    
 
    function todoRemoveAll() {
-      // for문을 돌려서 배열에 담긴 list_item을들 하나하나 지우기
+      // for문을 돌려서 배열에 담긴 list_item을 하나하나 지우기
       var ulChildren = todo_list.children;
       console.log(ulChildren.length);
       if (ulChildren.length !== 0) {
