@@ -1,0 +1,73 @@
+/* ! imagesRwd 과제 style.css*/
+
+/* 미디어 쿼리 */
+@media screen and (max-width: 600px) {
+  /* 한줄에 두개씩*/
+  .img-wrap {
+    width: 50%;
+    padding-top: 50%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 840px) {
+  /* 한줄에 세개씩 */
+  .img-wrap {
+    width: 33.333333333%;
+    padding-top: 33.333333333%;
+  }
+}
+@media screen and (min-width: 841px) and (max-width: 1200px) {
+  /* 한줄에 네개씩 */
+  .img-wrap {
+    width: 25%;
+    padding-top: 25%;
+  }
+}
+@media screen and (min-width: 1201px) {
+  body {
+    padding: 0 100px;
+  }
+  /* 한줄에 네개씩 */
+  .img-wrap {
+    width: 25%;
+    padding-top: 25%;
+  }
+}
+body {
+  margin: 0;
+  background: yellow;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.img-wrap {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 가로가 긴 이미지 처리 */
+.width-auto {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+  /* 중앙정렬 처리 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 세로가 긴 이미지 처리 */
+.height-auto {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  left: 0;
+  /* 세로 정렬 처리 */
+  top: 50%;
+  transform: translateY(-50%);
+}
