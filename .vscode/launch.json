@@ -4,7 +4,7 @@
       {
          "type": "chrome",
          "name": "Attach to Chrome",
-         "file": "${workspaceRoot}/todolist/index.html"
+         "file": "${workspaceRoot}/groupTodo/index.html"
       }
    ]
 }

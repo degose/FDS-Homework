@@ -27,12 +27,13 @@
     <div class="columns">
       <div class="column is-3">
         <div class="todo box">
-          <label class="sr-only" for="todo-title">오늘의 할일</label>
-          <input class="input" type="text" id="todo-title" placeholder="오늘의 할일">
-          <label class="sr-only" for="todo-content">내용</label>
+          <label class="label">누구의 할일이냐</label>
+          <label class="sr-only" for="todo-title1">오늘의 할일</label>
+          <input class="input" type="text" id="todo-title1" placeholder="오늘의 할일">
+          <label class="sr-only" for="todo-content1">내용</label>
           <textarea
             class="textarea"
-            id="todo-content"
+            id="todo-content1"
             cols="30"
             rows="10"
             placeholder="내용"></textarea>
@@ -54,21 +55,78 @@
       </div>
       <div class="column is-9">
         <div class="todo-item-container columns is-multiline"></div>
-
-        <!--<article class="todo-item column is-3 message is-primary">
-          <div class="message-header">
-            <h5 class="todo-item-title">todo.title</h5>
-            <button data-remove-index="'+todo.id+'" type="button" class="delete" aria-label="할일 아이템 제거"></button>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-3">
+        <div class="todo box">
+          <label class="label">누구의 할일이냐</label>
+          <label class="sr-only" for="todo-title2">오늘의 할일</label>
+          <input class="input" type="text" id="todo-title2" placeholder="오늘의 할일">
+          <label class="sr-only" for="todo-content2">내용</label>
+          <textarea
+            class="textarea"
+            id="todo-content2"
+            cols="30"
+            rows="10"
+            placeholder="내용"></textarea>
+          <div class="field is-group">
+            <button type="button" class="is-save button is-info is-outlined is-small">
+              <span class="icon is-small">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </span>
+              <span>저장</span>
+            </button>
+            <button type="button" class="is-cancel button is-outlined is-small">
+              <span class="icon is-small">
+                <i class="fa fa-remove" aria-hidden="true"></i>
+              </span>
+              <span>입력 취소</span>
+            </button>
           </div>
-          <div class="message-body">
-            <p class="todo-item-content">todo.content</p>
+        </div>
+      </div>
+      <div class="column is-9">
+        <div class="todo-item-container columns is-multiline"></div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-3">
+        <div class="todo box">
+          <label class="label">누구의 할일이냐</label>
+          <label class="sr-only" for="todo-title3">오늘의 할일</label>
+          <input class="input" type="text" id="todo-title3" placeholder="오늘의 할일">
+          <label class="sr-only" for="todo-content3">내용</label>
+          <textarea
+            class="textarea"
+            id="todo-content3"
+            cols="30"
+            rows="10"
+            placeholder="내용"></textarea>
+          <div class="field is-group">
+            <button type="button" class="is-save button is-info is-outlined is-small">
+              <span class="icon is-small">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </span>
+              <span>저장</span>
+            </button>
+            <button type="button" class="is-cancel button is-outlined is-small">
+              <span class="icon is-small">
+                <i class="fa fa-remove" aria-hidden="true"></i>
+              </span>
+              <span>입력 취소</span>
+            </button>
           </div>
-        </article>-->
-
+        </div>
+      </div>
+      <div class="column is-9">
+        <div class="todo-item-container columns is-multiline"></div>
       </div>
     </div>
   </div>
   <script src="./js/jquery.ajax.min.js"></script>
-  <script src="./js/grouptodo.js"></script>
+  <script src="./js/grouptodo.1.js"></script>
+  <script src="./js/grouptodo.2.js"></script>
+  <script src="./js/grouptodo.3.js"></script>
 </body>
 </html>

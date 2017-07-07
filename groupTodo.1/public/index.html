@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>groupTodo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+  <style>
+  .app.container {
+    margin: 1rem 2rem;
+  }
+  .todo > * {
+    margin-bottom: 10px;
+  }
+  .todo .textarea {
+    width: 100%;
+  }
+  .todo-item-container .todo-item {
+    background-color: transparent;
+  }
+</style>
+</head>
+<body>
+  <div class="app container is-fluid">
+    <div class="columns">
+      <div class="column is-3">
+        <div class="todo box">
+          <label class="label">누구의 할일이냐</label>
+          <p class="control">
+            <span class="select">
+              <select id="user">
+                <option id="user_1" value="user1" class="user">user1</option>
+                <option id="user_2" value="user2" class="user">user2</option>
+                <option id="user_3" value="user3" class="user">user3</option>
+              </select>
+            </span>
+          </p>
+          <label class="sr-only" for="todo-title">오늘의 할일</label>
+          <input class="input" type="text" id="todo-title" placeholder="오늘의 할일">
+          <label class="sr-only" for="todo-content">내용</label>
+          <textarea
+            class="textarea"
+            id="todo-content"
+            cols="30"
+            rows="10"
+            placeholder="내용"></textarea>
+          <div class="field is-group">
+            <button type="button" class="is-save button is-info is-outlined is-small">
+              <span class="icon is-small">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </span>
+              <span>저장</span>
+            </button>
+            <button type="button" class="is-cancel button is-outlined is-small">
+              <span class="icon is-small">
+                <i class="fa fa-remove" aria-hidden="true"></i>
+              </span>
+              <span>입력 취소</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--<div class="column is-9"></div>-->
+        <div class="todo-item-container todo-items-1 column is-3 is-multiline"></div>
+        <div class="todo-item-container todo-items-2 column is-3 is-multiline"></div>
+        <div class="todo-item-container todo-items-3 column is-3 is-multiline"></div>
+    </div>
+  </div>
+  <script src="./js/jquery.ajax.min.js"></script>
+  <script src="./js/grouptodo.js"></script>
+</body>
+</html>
