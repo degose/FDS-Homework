@@ -9,7 +9,7 @@
   'use strict';
 
   // 변수 설정들
-  var app, todo ,todo_buttons, todo_title, todo_content, todo_items, todo_storage, template, todo_item, target, remove_id, select, todo_items_1, todo_items_2, todo_items_3, value, e, value_1,value_2,value_3;
+  var app, todo ,todo_buttons, todo_title, todo_content, todo_items, todo_storage, template, todo_item, target, remove_id, select, todo_items_1, todo_items_2, todo_items_3, value, e, value_1,value_2,value_3, template1 ,template2, template3;
 
   var document = global.document;
   var todo_api_address = '';
@@ -39,8 +39,8 @@
     select = document.querySelector('select');
     // value = select.value;
     // console.log("value",value);
-
     
+
     
 
     // 데이터 가져오는 함수
@@ -120,6 +120,7 @@
     // 서버에 올리기(POST)
     select = document.querySelector('select');
     value = select.value;
+    
     var e = document.getElementById('user').options[document.getElementById('user').selectedIndex].text;
         todo_api_address = "/" + e;   // << 데이터 저장되는 곳
     $.post(todo_api_address, $.param(todo_item), function (data, status) {
@@ -161,59 +162,91 @@
 
   // todo 아이템 보이기
   function render() {
-    
-
     // 왜 빈 문자열로 초기화? 초기화 안해주면 화면에 undefined나옴 => 뒤에 문자열 더해줄거라서 문자열이라고 말해주는것
-    template = '';
+    template1 = '';
+    template2 = '';
+    template3 = '';
     // todo_items에 태그 넣기
-    // todo_items.innerHTML = '';
+    // todo_items_1.innerHTML = '';
+    // todo_items_2.innerHTML = '';
+    // todo_items_3.innerHTML = '';
     // todo_storage에 목록들을 순환해서 tempate에 추가
     todo_storage.forEach(function (todo) {
-      template += 
-      '<article class="todo-item column message is-info">'+
-        '<div class="message-header">'+
-          '<h5 class="todo-item-title">'+todo.title+'</h5>'+
-          '<button data-remove-index="'+todo.id+'" type="button" class="delete" aria-label="할일 아이템 제거"></button>'+
-        '</div>'+
-        '<div class="message-body">'+
-          '<p class="todo-item-content">'+todo.content+'</p>'+
-        '</div>'+
-      '</article>'
+      if ( value === "user1" ) {
+        template1 += 
+          '<article class="todo-item column message is-success">'+
+            '<div class="message-header">'+
+              '<h5 class="todo-item-title">'+todo.title+'</h5>'+
+              '<button data-remove-index="'+todo.id+'" type="button" class="delete" aria-label="할일 아이템 제거"></button>'+
+            '</div>'+
+            '<div class="message-body">'+
+              '<p class="todo-item-content">'+todo.content+'</p>'+
+            '</div>'+
+          '</article>'
+        todo_items_1.innerHTML = template1;
+      }
+      else if ( value === "user2" ) {
+        template2 += 
+          '<article class="todo-item column message is-warning">'+
+            '<div class="message-header">'+
+              '<h5 class="todo-item-title">'+todo.title+'</h5>'+
+              '<button data-remove-index="'+todo.id+'" type="button" class="delete" aria-label="할일 아이템 제거"></button>'+
+            '</div>'+
+            '<div class="message-body">'+
+              '<p class="todo-item-content">'+todo.content+'</p>'+
+            '</div>'+
+          '</article>'
+        todo_items_2.innerHTML = template2;  
+      }
+      else if ( value === "user3" ) {
+        template3 += 
+          '<article class="todo-item column message is-info">'+
+            '<div class="message-header">'+
+              '<h5 class="todo-item-title">'+todo.title+'</h5>'+
+              '<button data-remove-index="'+todo.id+'" type="button" class="delete" aria-label="할일 아이템 제거"></button>'+
+            '</div>'+
+            '<div class="message-body">'+
+              '<p class="todo-item-content">'+todo.content+'</p>'+
+            '</div>'+
+          '</article>'
+        todo_items_3.innerHTML = template3;
+      }
+      
+      // template += 
+      // '<article class="todo-item column message is-info">'+
+      //   '<div class="message-header">'+
+      //     '<h5 class="todo-item-title">'+todo.title+'</h5>'+
+      //     '<button data-remove-index="'+todo.id+'" type="button" class="delete" aria-label="할일 아이템 제거"></button>'+
+      //   '</div>'+
+      //   '<div class="message-body">'+
+      //     '<p class="todo-item-content">'+todo.content+'</p>'+
+      //   '</div>'+
+      // '</article>'
     });
     // todo_items_3.innerHTML = template;
     // todo_items에 태그 넣기
 
-    // function interA() {
+
+
+
+
+
+    // if ( value === "user1") {
     //   todo_items_1.innerHTML = template;
-    // };
-    // interA();
-    // function interB() {
+    // }
+    // else if (value === "user2") {
     //   todo_items_2.innerHTML = template;
-    // };
-    // interB();
-    // function interC() {
+    // }
+    // else if (value === "user3") {
     //   todo_items_3.innerHTML = template;
-    // };
-    // interC();
-
-
-
-
-
-    if ( value === "user1") {
-      todo_items_1.innerHTML = template;
-    }
-    else if (value === "user2") {
-      todo_items_2.innerHTML = template;
-    }
-    else if (value === "user3") {
-      todo_items_3.innerHTML = template;
-    }
+    // }
 
 
     console.log("select.value:",value);
+    console.log("value1",value_1);
+    console.log('address',todo_api_address);
+    // console.log(document.getElementById('user').options[document.getElementById('user').selectedIndex].index([1]));
   };
-
 
   // init 함수 실행
   init();
